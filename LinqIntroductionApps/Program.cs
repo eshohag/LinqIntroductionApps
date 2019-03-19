@@ -15,10 +15,13 @@ namespace LinqIntroductionApps
                 new Student() { StudentId = 4, FullName = "Sakib Al Hassan" , Age = 20}
             };
 
-            //var aStudent = (from student in studentListFromDatabase
-            //                where student.StudentId == 2
-            //                select student).FirstOrDefault();
-            //Console.WriteLine(aStudent.StudentId + " Full Name- " + aStudent.FullName);
+            //var students = from student in studentListFromDatabase select student;
+            //Console.WriteLine(students.Count());
+
+            //var aStudent = from student in studentListFromDatabase
+            //               where student.StudentId == 2
+            //               select student;
+            //Console.WriteLine(aStudent.Count());
 
             //var aStudent = from student in studentListFromDatabase
             //               where student.StudentId == 2
@@ -27,6 +30,11 @@ namespace LinqIntroductionApps
             //{
             //    Console.WriteLine(student.StudentId + " Full Name- " + student.FullName);
             //}
+
+            //var aStudent = (from student in studentListFromDatabase
+            //                where student.StudentId == 2
+            //                select student).FirstOrDefault();
+            //Console.WriteLine(aStudent.StudentId + " Full Name- " + aStudent.FullName);
 
             //var aStudent = studentListFromDatabase.FirstOrDefault(a => a.StudentId == 2);
 
@@ -45,14 +53,14 @@ namespace LinqIntroductionApps
             //var aStudent = studentListFromDatabase.Count;
             //Console.WriteLine($"Total Number of Student-{aStudent}");
 
-            studentListFromDatabase.Add(new Student() { StudentId = 5, FullName = "Muskier Brahmin", Age = 13 });
-            //db.SaveChange();           //For LINQ Query Execution into database
-            var aStudentCount = studentListFromDatabase.Count;
-            Console.WriteLine($"Total Number of Students after Adding- {aStudentCount}");
+            //studentListFromDatabase.Add(new Student() { StudentId = 5, FullName = "Muskier Brahmin", Age = 13 });
+            ////db.SaveChange();           //For LINQ Query Execution into database
+            //var aStudentCount = studentListFromDatabase.Count;
+            //Console.WriteLine($"Total Number of Students after Adding- {aStudentCount}");
 
-            studentListFromDatabase.Insert(5, new Student() { StudentId = 6, FullName = "Musfiqur Rahmim", Age = 13 });
-            var aStudent = studentListFromDatabase.Count;
-            Console.WriteLine($"Total Number of Students after inserting- {aStudent}");
+            //studentListFromDatabase.Insert(5, new Student() { StudentId = 6, FullName = "Musfiqur Rahmim", Age = 13 });
+            //var aStudent = studentListFromDatabase.Count;
+            //Console.WriteLine($"Total Number of Students after inserting- {aStudent}");
 
             Console.ReadKey();
         }
